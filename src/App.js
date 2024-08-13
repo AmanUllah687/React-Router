@@ -7,6 +7,9 @@ import { NoMAtch } from "./componenets/NoMatch";
 import { Products } from "./componenets/Products";
 import { FeaturedProducts } from "./componenets/FeautredProducts";
 import { NewProducts } from "./componenets/NewProducts";
+import { Users } from "./componenets/Users";
+import { UserDetail } from "./componenets/UserDetail";
+import { Admin } from "./componenets/Admin";
 function App() {
   return (
     <>
@@ -20,6 +23,10 @@ function App() {
     <Route path='featured' element={<FeaturedProducts />} />
     <Route path='new' element={<NewProducts />} />
 
+    </Route>
+    <Route path='users' element={<Users />}>
+    <Route path=':userId' element={<UserDetail />} />
+    <Route path='admin' element={<Admin />} />
     </Route>
     <Route path='*' element={<NoMAtch />} />
    </Routes>
