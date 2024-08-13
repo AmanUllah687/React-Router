@@ -3,6 +3,7 @@ import { Home } from "./componenets/Home";
 import { About } from "./componenets/About";
 import { Navbar } from "./componenets/Navbar";
 import { OrderSummary } from "./componenets/OrderSummary";
+import { NoMAtch } from "./componenets/NoMatch";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
     <Route path='/' element={<Home />} />
     <Route path='about' element={<About />} />
     <Route path='order-summary' element={<OrderSummary />} />
+    <Route path='*' element={<NoMAtch />} />
    </Routes>
    </>
   );
