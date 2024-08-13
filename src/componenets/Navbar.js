@@ -8,9 +8,10 @@ import { NavLink } from "react-router-dom"
         }
     }
  return (
-    <nav>
+    <nav className="primary-nav">
     <NavLink style={navlinkstyle} to='/'>Home</NavLink>
     <NavLink style={navlinkstyle} to='/About'>About</NavLink>
+    <NavLink style={navlinkstyle} to='/products'>Products</NavLink>
     </nav>
  )
  }
