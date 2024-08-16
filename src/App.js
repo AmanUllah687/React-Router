@@ -12,10 +12,14 @@ import { NewProducts } from "./componenets/NewProducts";
 import { Users } from "./componenets/Users";
 import { UserDetail } from "./componenets/UserDetail";
 import { Admin } from "./componenets/Admin";
+import { Profile } from './componenets/Profile';
+import { AuthProvider } from './componenets/auth';
+import { Login } from './componenets/Login';
+import { ReqiuredAuth } from './componenets/RequiredAuth';
 const LazyAbout = React.lazy(() => import('./componenets/About'))
 function App() {
   return (
-    <>
+    <AuthProvider>
     <Navbar />
    <Routes>
     <Route path='/' element={<Home />} />
@@ -34,9 +38,11 @@ function App() {
     <Route path=':userId' element={<UserDetail />} />
     <Route path='admin' element={<Admin />} />
     </Route>
+    <Route path='profile' element={<ReqiuredAuth><Profile /></ReqiuredAuth>} />
+    <Route path='login' element={<Login />} />
     <Route path='*' element={<NoMAtch />} />
    </Routes>
-   </>
+   </AuthProvider>
   );
 }
 
