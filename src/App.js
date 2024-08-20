@@ -38,8 +38,8 @@ function App() {
     <Route path=':userId' element={<UserDetail />} />
     <Route path='admin' element={<Admin />} />
     </Route>
-    <Route path='profile' element={<ReqiuredAuth><Profile /></ReqiuredAuth>} />
-    <Route path='login' element={<Login />} />
+    <Route path='/profile' element={<ReqiuredAuth><Profile /></ReqiuredAuth>} />
+    <Route path='/login' element={<Login />} />
     <Route path='*' element={<NoMAtch />} />
    </Routes>
    </AuthProvider>
